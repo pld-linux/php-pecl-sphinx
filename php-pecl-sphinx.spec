@@ -16,6 +16,7 @@ BuildRequires:	libsphinxclient-devel
 BuildRequires:	php-devel >= 4:5.0.4
 BuildRequires:	rpmbuild(macros) >= 1.519
 %{?requires_php_extension}
+Provides:	php(sphinx)
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
