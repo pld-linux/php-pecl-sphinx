@@ -6,7 +6,7 @@
 Summary:	%{modname} - client for sphinx SQL full-text search engine
 Name:		php-pecl-%{modname}
 Version:	1.0.4
-Release:	2
+Release:	3
 License:	PHP 3.01
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
