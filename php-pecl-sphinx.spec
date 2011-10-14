@@ -1,7 +1,3 @@
-#
-# Conditional build:
-%bcond_without	tests		# build without tests
-
 %define		modname	sphinx
 Summary:	%{modname} - client for sphinx SQL full-text search engine
 Name:		php-pecl-%{modname}
