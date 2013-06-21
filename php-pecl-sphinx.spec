@@ -1,6 +1,7 @@
+%define		php_name	php%{?php_suffix}
 %define		modname	sphinx
 Summary:	%{modname} - client for sphinx SQL full-text search engine
-Name:		php-pecl-%{modname}
+Name:		%{php_name}-pecl-%{modname}
 Version:	1.2.0
 Release:	2
 License:	PHP 3.01
@@ -9,8 +10,8 @@ Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 # Source0-md5:	74e23a18f8cea31d64735f2cf5a3115c
 URL:		http://pecl.php.net/package/sphinx/
 BuildRequires:	libsphinxclient-devel
-BuildRequires:	php-devel >= 4:5.0.4
-BuildRequires:	rpmbuild(macros) >= 1.519
+BuildRequires:	%{php_name}-devel >= 4:5.0.4
+BuildRequires:	rpmbuild(macros) >= 1.650
 %{?requires_php_extension}
 Provides:	php(sphinx)
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
