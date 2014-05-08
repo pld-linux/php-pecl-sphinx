@@ -2,15 +2,15 @@
 %define		modname		sphinx
 Summary:	%{modname} - client for sphinx SQL full-text search engine
 Name:		%{php_name}-pecl-%{modname}
-Version:	1.3.0
-Release:	2
+Version:	1.3.2
+Release:	1
 License:	PHP 3.01
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
-# Source0-md5:	ee4dd6c33ad4082f1cdab6e9a7407f28
+# Source0-md5:	da44407c2ca6584fa5fa673bd0ac9708
 URL:		http://pecl.php.net/package/sphinx/
-BuildRequires:	libsphinxclient-devel
 BuildRequires:	%{php_name}-devel >= 4:5.0.4
+BuildRequires:	libsphinxclient-devel
 BuildRequires:	rpmbuild(macros) >= 1.650
 %{?requires_php_extension}
 Provides:	php(sphinx)
@@ -35,6 +35,7 @@ install -d $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d
 %{__make} install \
 	INSTALL_ROOT=$RPM_BUILD_ROOT \
 	EXTENSION_DIR=%{php_extensiondir}
+
 cat <<'EOF' > $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d/%{modname}.ini
 ; Enable %{modname} extension module
 extension=%{modname}.so
