@@ -3,7 +3,7 @@
 Summary:	%{modname} - client for sphinx SQL full-text search engine
 Name:		%{php_name}-pecl-%{modname}
 Version:	1.3.2
-Release:	1
+Release:	2
 License:	PHP 3.01
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
@@ -14,6 +14,7 @@ BuildRequires:	libsphinxclient-devel
 BuildRequires:	rpmbuild(macros) >= 1.650
 %{?requires_php_extension}
 Provides:	php(sphinx)
+Obsoletes:	php-pecl-sphinx < 1.3.2-1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
